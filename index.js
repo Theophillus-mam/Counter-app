@@ -10,7 +10,7 @@ function increment() {
         count = count + 1;
         document.getElementById('count').innerHTML = count;
       }
-    if (count>=30 && count==38){
+    if (count>=30 && count<=40){
         count = count + 2.5;
         document.getElementById('count').innerHTML = count;
     }
@@ -26,16 +26,21 @@ function decrement(){
         count = count - 2;
         document.getElementById('count').innerHTML = count;
     }
-    else{
-        count = count - 1;
-        document.getElementById('count').innerHTML = count;
-    }
     if (count<=40 && count>=30){
         count = count - 2.5;
         document.getElementById('count').innerHTML = count;
     }
-    
+    if(count==0){
+        document.getElementById('count').innerHTML = 0;
+    }
+
+    else{
+     count = count - 1;
+     document.getElementById('count').innerHTML = count;
 }
+    }
+    
+
 function reset(){
     count = count - count
     document.getElementById('count').innerHTML = count;
